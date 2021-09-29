@@ -12,7 +12,7 @@ A AWS Lambda based service for sending Cloudwatch alarm to Slack. Uses CDK to pr
 4. You are redirected to a new page where you can see your *Webhook URL*. Copy the value; you will need it soon
 
 
-### AWS Setup
+### AWS setup
 
 This project uses CDK for provisioning stack.
 
@@ -21,7 +21,7 @@ cp .env.example .env # then fill with new settings
 cdk deploy
 ```
 
-### Set CloudWatch Alarm Action
+### CloudWatch alarm action setup
 ![Alt text](doc/set_cloudwatch_alarm_action.png "set action")
 
 
