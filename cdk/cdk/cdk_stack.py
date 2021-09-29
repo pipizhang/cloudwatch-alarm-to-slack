@@ -1,6 +1,5 @@
 #-*- coding: utf-8 -*-
 import os
-from types import SimpleNamespace
 
 from aws_cdk import (
     core as cdk,
@@ -16,24 +15,13 @@ class CdkStack(cdk.Stack):
 
     def __init__(self, scope: cdk.Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
-        #print(os.getenv('SLACK_WEBHOOK_URL'))
-        #print(os.getenv('CDK_DEFAULT_ACCOUNT'))
 
-        # load config
-        self.config =  self.load_configuration()
         # sns topic
         topic = self.create_sns_topic()
         # lambda layer
         self.lambda_layers = self.create_lambda_layers()
         # service
         self.create_service(topic)
-
-    def load_configuration(self):
-        """Load configurations"""
-
-        cfg = SimpleNamespace()
-
-        return cfg
 
     def create_sns_topic(self):
         """Create SNS topic for CloudWatch alarm"""
