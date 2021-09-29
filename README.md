@@ -2,6 +2,7 @@
 
 A AWS Lambda based service for sending Cloudwatch alarm to Slack. Uses CDK to provision stack (SNS, Lambda).
 
+![Alt text](doc/set_cloudwatch_alarm_action.png "set action")
 
 ### Slack setup
 
