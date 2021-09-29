@@ -2,7 +2,7 @@
 
 A AWS Lambda based service for sending Cloudwatch alarm to Slack. Uses CDK to provision stack (SNS, Lambda).
 
-![Alt text](doc/set_cloudwatch_alarm_action.png "set action")
+![Alt text](doc/overview.jpg "overview")
 
 ### Slack setup
 
@@ -20,6 +20,10 @@ This project uses CDK for provisioning stack.
 cp .env.example .env # then fill with new settings
 cdk deploy
 ```
+
+### Set CloudWatch Alarm Action
+![Alt text](doc/set_cloudwatch_alarm_action.png "set action")
+
 
 ### More
 
