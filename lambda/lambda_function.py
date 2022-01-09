@@ -22,7 +22,7 @@ def send_alert_slack(message):
 def prepare_message(record):
     """Format CloudWatch message"""
     subject = record['Sns']['Subject']
-    message = record['Sns']['Message']
+    message = json.loads(record['Sns']['Message'])
     body = {
     'text': subject,
     'attachments': [{
